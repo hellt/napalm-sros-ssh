@@ -26,7 +26,7 @@ driver = napalm.get_network_driver("sros_ssh")
 device = driver(
     hostname="192.168.1.10",
     username="admin",
-    password="nokiasr0s",
+    password="admin",
     optional_args={"fast_cli": True},
 )
 
@@ -69,3 +69,8 @@ else:
 device.close()
 print("Done.")
 ```
+
+## Napalm-ansible integration
+Currently the driver supports the following modules from [napalm-ansible](https://github.com/napalm-automation/napalm-ansible) integration project (check [examples](examples/ansible)):
+
+* napalm_install_config

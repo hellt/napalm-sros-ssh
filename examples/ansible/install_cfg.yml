@@ -1,0 +1,17 @@
+---
+- hosts: R1
+  gather_facts: No
+
+  tasks:
+    - name: Install Config
+      napalm_install_config:
+        dev_os: sros_ssh
+        hostname: r1.netdevops.me
+        optional_args: # set non-default SSH port if necessary
+          port: 17057
+        username: admin
+        password: admin
+        config_file: "example1.cfg"
+        commit_changes: True
+        get_diffs: True
+        diff_file: "intall_diff.cfg"

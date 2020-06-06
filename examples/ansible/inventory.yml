@@ -1,0 +1,7 @@
+all:
+  vars:
+    ansible_network_os: sros
+    ansible_connection: network_cli
+
+  hosts:
+    R1:
